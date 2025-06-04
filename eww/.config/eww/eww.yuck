@@ -1,21 +1,18 @@
 (defwidget bar []
   (centerbox :orientation "h"
-    (empty)
+     (empty)
     (clock)
-    (sidestuff)))
+    (sidestuff)
+))
 
 (defwidget empty []
-  (box :class "empty" :orientation "h" :halign "start")
-)
+  (box :class "empty" :orientation "h" :halign "start"))
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (metric :label "🔊"
             :value volume
             :onchange "amixer -D pulse sset Master {}%")
-    (metric :label ""
-            :value {EWW_RAM.used_mem_perc}
-            :onchange "")
    ))
 
 (defwidget clock []
@@ -28,7 +25,7 @@
   (box :orientation "h"
        :class "metric"
        :space-evenly false
-    (box :class "label" label)
+    (box :class "label" (button :onclick "gnome-control-center" :class "icon" "🔊"))
     (scale :min 0
            :max 101
            :active {onchange != ""}
@@ -43,8 +40,9 @@
   "date '+%H:%M:%S %b %d, %Y'")
 
 (defwindow bar
-  :monitor 0
-  :windowtype "dock"
+  :monitor '[0, 1, 2]'
+  :windowtype "desktop"
+  :stacking "bg"
   :geometry (geometry :x "0%"
                       :y "0%"
                       :width "100%"
