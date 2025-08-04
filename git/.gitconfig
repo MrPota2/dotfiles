@@ -8,3 +8,6 @@
 	smudge = git-lfs smudge -- %f
 [credential]
 	helper = store
+
+[push]
+	autoSetupRemote = true
