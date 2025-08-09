@@ -11,3 +11,10 @@
 
 [push]
 	autoSetupRemote = true
+
+[pull]
+	rebase = false
+
+[user]
+	name = Adrian Milvang
+	email = adrian.milvang@gmail.com
