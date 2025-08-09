@@ -1,6 +1,3 @@
-[user]
-	name = MrPota2
-	email = adrian.milvang@gmail.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
