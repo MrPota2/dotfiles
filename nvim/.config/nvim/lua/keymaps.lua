@@ -41,7 +41,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '<C-s>', ':w<CR>', { noremap = true, silent = true }) -- Save
+vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true }) -- Save
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
