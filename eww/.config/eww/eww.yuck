@@ -40,7 +40,29 @@
   "date '+%H:%M:%S %b %d, %Y'")
 
 (defwindow bar
-  :monitor '[0, 1, 2]'
+  :monitor 0
+  :windowtype "desktop"
+  :stacking "bg"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "39px")
+  (bar))
+(defwindow bar1
+  :monitor 1
+  :windowtype "desktop"
+  :stacking "bg"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "39px")
+  (bar))
+(defwindow bar2
+  :monitor 2
   :windowtype "desktop"
   :stacking "bg"
   :geometry (geometry :x "0%"
