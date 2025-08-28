@@ -270,6 +270,21 @@ return {
           end,
         },
       }
+
+      local mason_registry = require 'mason-registry'
+
+      local ensure_installed = { 'lua-language-server', 'typescript-language-server', 'css-lsp', 'omnisharp', 'csharpier', 'prettier' }
+
+      for _, tool in ipairs(ensure_installed) do
+        local pkg = mason_registry.get_package(tool)
+        if not pkg:is_installed() then
+          pkg:install():on('closed', function()
+            vim.schedule(function()
+              vim.notify('Mason: ' .. tool .. ' installed', vim.log.levels.INFO)
+            end)
+          end)
+        end
+      end
     end,
   },
 }
