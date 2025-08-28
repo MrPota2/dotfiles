@@ -48,6 +48,10 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc
 
 vim.keymap.set('n', '<Up>', ':<Up>', { noremap = true, silent = false })
 
+vim.keymap.set('n', '<leader>f', function()
+  vim.lsp.buf.format { async = true }
+end, { desc = 'Format buffer' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -59,5 +63,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
     vim.hl.on_yank()
+  end,
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  callback = function()
+    vim.lsp.buf.format { async = false }
   end,
 })

@@ -270,10 +270,24 @@ return {
           end,
         },
       }
+      -- mason-null-ls
+      require('mason-null-ls').setup {
+        ensure_installed = { 'prettier' },
+        automatic_installation = true,
+      }
 
+      -- null-ls
+      local null_ls = require 'null-ls'
+
+      null_ls.setup {
+        sources = {
+          null_ls.builtins.formatting.prettier,
+          -- you can add more later like eslint_d, stylua, etc.
+        },
+      }
       local mason_registry = require 'mason-registry'
 
-      local ensure_installed = { 'lua-language-server', 'typescript-language-server', 'css-lsp', 'omnisharp', 'csharpier', 'prettier' }
+      local ensure_installed = { 'lua-language-server', 'typescript-language-server', 'css-lsp', 'omnisharp', 'csharpier' }
 
       for _, tool in ipairs(ensure_installed) do
         local pkg = mason_registry.get_package(tool)
