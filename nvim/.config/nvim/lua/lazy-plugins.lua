@@ -32,6 +32,15 @@ require('lazy').setup({
   --            })
   --        end,
   --    }
+
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {
+      indent = { char = '│' },
+      scope = { enabled = true, show_start = true, show_end = true, highlight = { 'Function', 'Label' } },
+    },
+  },
   --
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`.
@@ -80,7 +89,6 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
   require 'kickstart/plugins/mini',
 
   require 'kickstart/plugins/treesitter',
