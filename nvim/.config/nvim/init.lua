@@ -101,6 +101,8 @@ require 'lazy-bootstrap'
 
 require 'lazy-plugins'
 
+require 'custom/godot_server'
+
 require('colorizer').setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`

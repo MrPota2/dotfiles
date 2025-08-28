@@ -40,6 +40,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- custom keymaps
 
 vim.g.mapleader = ' '
+vim.keymap.set('n', '<leader>fh', vim.lsp.buf.definition, { desc = 'Go to definition' })
+vim.keymap.set('n', '<leader>fj', vim.lsp.buf.declaration, { desc = 'Go to declarations' })
+vim.keymap.set('n', '<leader>fk', vim.lsp.buf.implementation, { desc = 'Go to declarations' })
 
 vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = "Save" })
 
