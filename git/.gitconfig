@@ -10,8 +10,10 @@
 	autoSetupRemote = true
 
 [pull]
-	rebase = false
+	rebase = true
 
 [user]
 	name = Adrian Milvang
 	email = adrian.milvang@gmail.com
+[init]
+	defaultBranch = main
