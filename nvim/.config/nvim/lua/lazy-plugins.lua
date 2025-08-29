@@ -32,6 +32,25 @@ require('lazy').setup({
   --            })
   --        end,
   --    }
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
+    config = function()
+      require('typescript-tools').setup {
+        -- optional settings
+        on_attach = function(client, bufnr)
+          -- your LSP on_attach stuff (keymaps, etc.)
+        end,
+        settings = {
+          tsserver_file_preferences = {
+            includeInlayParameterNameHints = 'all',
+            includeCompletionsForModuleExports = true,
+          },
+        },
+      }
+    end,
+  },
 
   {
     'lukas-reineke/indent-blankline.nvim',

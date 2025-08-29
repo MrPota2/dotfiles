@@ -287,7 +287,7 @@ return {
       }
       local mason_registry = require 'mason-registry'
 
-      local ensure_installed = { 'lua-language-server', 'typescript-language-server', 'css-lsp', 'omnisharp', 'csharpier' }
+      local ensure_installed = { 'lua-language-server', 'css-lsp', 'omnisharp', 'csharpier' }
 
       for _, tool in ipairs(ensure_installed) do
         local pkg = mason_registry.get_package(tool)
