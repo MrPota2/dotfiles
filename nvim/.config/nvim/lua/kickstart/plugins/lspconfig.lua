@@ -151,6 +151,12 @@ return {
             })
           end
 
+          vim.api.nvim_create_autocmd('CursorHold', {
+            callback = function()
+              vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })
+            end,
+          })
+
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them
           --
