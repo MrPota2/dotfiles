@@ -41,6 +41,8 @@ require('lazy').setup({
         -- optional settings
         on_attach = function(client, bufnr)
           -- your LSP on_attach stuff (keymaps, etc.)
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
         end,
         settings = {
           tsserver_file_preferences = {
