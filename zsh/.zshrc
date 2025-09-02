@@ -103,7 +103,7 @@ PROJECT_PATHS=(~/git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+alias lsgr="eza --git-repos -l"
 export PATH="$PATH:/home/adrian/bin"
 
 # Created by `pipx` on 2025-05-30 20:31:22
