@@ -17,5 +17,3 @@
 	email = adrian.milvang@gmail.com
 [init]
 	defaultBranch = main
-[diff]
-	ignoreSpaceChange = true
