@@ -1,3 +1,4 @@
+
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/home/adrian/.zsh/completions:"* ]]; then export FPATH="/home/adrian/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
@@ -121,3 +122,20 @@ fi
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH=$PATH:$HOME/go/bin
 . "/home/adrian/.deno/env"
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' ignore-parents parent pwd
+zstyle ':completion:*' insert-unambiguous false
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' list-suffixes true
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]} r:|[._-]=** r:|=**' 'm:{[:lower:]}={[:upper:]} r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' max-errors 0
+zstyle :compinstall filename '/home/adrian/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall

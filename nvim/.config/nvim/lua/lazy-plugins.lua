@@ -33,6 +33,19 @@ require('lazy').setup({
   --        end,
   --    }
   {
+    'jiaoshijie/undotree',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    ---@module 'undotree.collector'
+    ---@type UndoTreeCollector.Opts
+    opts = {
+      -- your options
+    },
+    keys = { -- load the plugin only when using it's keybinding:
+      { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>" },
+    },
+  },
+
+  {
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
