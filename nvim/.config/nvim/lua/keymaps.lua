@@ -7,12 +7,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('n', '<leader>d', function()
-  vim.diagnostic.jump { count = vim.v.count1 }
-end, { desc = 'Go to next diagnostic in the current buffer' })
-vim.keymap.set('n', '<leader>D', function()
-  vim.diagnostic.jump { count = -vim.v.count1 }
-end, { desc = 'Go to previous diagnostic in the current buffer' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -75,6 +69,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.api.nvim_create_autocmd('BufWritePre', {
   callback = function()
     vim.lsp.buf.format { async = false }
-    vim.api.nvim_command 'TSToolsOrganizeImports'
   end,
 })
