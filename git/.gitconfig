@@ -17,3 +17,6 @@
 	email = adrian.milvang@gmail.com
 [init]
 	defaultBranch = main
+[core]
+	pager = 
+	editor = nvim
