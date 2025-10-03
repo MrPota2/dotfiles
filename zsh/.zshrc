@@ -785,3 +785,21 @@ _rg "$@"
 # sh-basic-offset: 2
 # End:
 # vim: ft=zsh sw=2 ts=2 et
+
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' ignore-parents parent pwd .. directory
+zstyle ':completion:*' insert-unambiguous true
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-suffixes true
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=** r:|=** l:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' original true
+zstyle :compinstall filename '/c/Users/adria/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall

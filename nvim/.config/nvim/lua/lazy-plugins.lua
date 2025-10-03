@@ -46,12 +46,38 @@ require('lazy').setup({
   },
 
   {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup {
+
+        opts = {
+          -- Defaults
+          enable_close = true, -- Auto close tags
+          enable_rename = true, -- Auto rename pairs of tags
+          enable_close_on_slash = false, -- Auto close on trailing </
+        },
+        -- Also override individual filetype configs, these take priority.
+        -- Empty by default, useful if one of the "opts" global settings
+        -- doesn't work well in a specific filetype
+        per_filetype = {
+          ['html'] = {
+            enable_close = false,
+          },
+        },
+      }
+    end,
+  },
+
+  {
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
     config = function()
       require('typescript-tools').setup {
         -- optional settings
+        tsserver_plugins = {
+          '@styled/typescript-styled-plugins',
+        },
         on_attach = function(client, bufnr)
           -- your LSP on_attach stuff (keymaps, etc.)
           client.server_capabilities.documentFormattingProvider = false
@@ -59,6 +85,7 @@ require('lazy').setup({
         end,
         settings = {
           tsserver_file_preferences = {
+            code_lens = 'all',
             includeInlayParameterNameHints = 'all',
             includeCompletionsForModuleExports = true,
           },
