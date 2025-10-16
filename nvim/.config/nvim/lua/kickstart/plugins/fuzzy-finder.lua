@@ -50,6 +50,7 @@ return {
         --
         defaults = {
           file_ignore_patterns = { 'node_modules' },
+          path_display = { 'smart' },
         },
         -- defaults = {
         --   mappings = {
@@ -58,8 +59,8 @@ return {
         -- },
         -- pickers = {}
         extensions = {
-          ['ui-select'] = {
-            require('telescope.themes').get_dropdown(),
+          ['ui-select'] = require('telescope.themes').get_dropdown {
+            path_display = { 'filename_first' },
           },
         },
       }
@@ -80,6 +81,8 @@ return {
       vim.keymap.set('n', '<leader>s.', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>sr', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+      vim.keymap.set('n', '<leader>sgb', builtin.git_branches, { desc = '[S]earch [G]it branches ("." for repeat)' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
