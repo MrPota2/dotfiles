@@ -93,6 +93,7 @@ require('lazy').setup({
           client.server_capabilities.documentRangeFormattingProvider = false
         end,
         settings = {
+          expose_as_code_action = 'all',
           tsserver_file_preferences = {
             code_lens = 'all',
             includeInlayParameterNameHints = 'all',
