@@ -1,0 +1,6 @@
+2025/10/28-08:23:26.773 4 Reusing MANIFEST /home/adrian/.config/microsoft-edge/Default/Local Storage/leveldb/MANIFEST-000001
+2025/10/28-08:23:26.778 4 Recovering log #4
+2025/10/28-08:23:26.779 4 Reusing old log /home/adrian/.config/microsoft-edge/Default/Local Storage/leveldb/000004.log 
+2025/10/28-08:24:09.823 5 Level-0 table #8: started
+2025/10/28-08:24:09.829 5 Level-0 table #8: 33306 bytes OK
+2025/10/28-08:24:09.836 5 Delete type=0 #4

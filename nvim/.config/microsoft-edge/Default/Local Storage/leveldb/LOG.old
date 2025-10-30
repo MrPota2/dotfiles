@@ -1,0 +1,5 @@
+2025/10/28-08:23:06.733 4 Creating DB /home/adrian/.config/microsoft-edge/Default/Local Storage/leveldb since it was missing.
+2025/10/28-08:23:06.768 4 Reusing MANIFEST /home/adrian/.config/microsoft-edge/Default/Local Storage/leveldb/MANIFEST-000001
+2025/10/28-08:23:15.186 5 Level-0 table #5: started
+2025/10/28-08:23:15.195 5 Level-0 table #5: 33328 bytes OK
+2025/10/28-08:23:15.204 5 Delete type=0 #3
