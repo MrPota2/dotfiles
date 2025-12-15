@@ -111,6 +111,7 @@ CDPATH=~/git
 #
 alias gclean="git fetch --prune && git branch -vv | grep 'gone]' | awk '{print $1}' | xargs git branch -D"
 alias lsgr="eza --git-repos -l"
+alias copy="xsel -ib"
 export PATH="$PATH:/home/adrian/bin"
 
 # Created by `pipx` on 2025-05-30 20:31:22
@@ -120,10 +121,6 @@ if [[ -d $HOME/.cargo/env ]]; then
 fi
 
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-export PATH=$PATH:$HOME/go/bin
-. "/home/adrian/.deno/env"#compdef rg
 
 ##
 # zsh completion function for ripgrep
@@ -792,14 +789,14 @@ _rg "$@"
 
 # The following lines were added by compinstall
 
-zstyle ':completion:*' completer _expand _complete _ignored
+zstyle ':completion:*' _complete 
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents parent pwd .. directory
 zstyle ':completion:*' insert-unambiguous true
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-suffixes true
-zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=** r:|=** l:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=** l:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** l:|=*'
 zstyle ':completion:*' original true
 zstyle :compinstall filename '/c/Users/adria/.zshrc'
 
