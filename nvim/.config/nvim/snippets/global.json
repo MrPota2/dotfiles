@@ -1,0 +1,23 @@
+{
+  "Basic": { "prefix": "ba", "body": "T1=${one} T2=${two} T0=${three}" },
+  "ChangelogDataField": {
+    "prefix": "cl",
+    "body": [
+      "import React from 'react';",
+      "import { ChangelogDataField } from './ChangelogDataField';",
+      "",
+      "export const ${data_field}ChangelogDataField: () => ChangelogDataField = () => ({",
+      "  ChangeDescription: ({ newValue }) => {",
+      "    return (",
+      "      <>",
+      "      </>",
+      "    );",
+      "  },",
+      "",
+      "  getKeys: () => ['${data_field}'],",
+      "  getColor: () => ({ foreground: '${fg_color}', background: '${bg_color}' }),",
+      "  getIcon: () => ${icon},",
+      "});"
+    ]
+  }
+}

@@ -22,6 +22,7 @@ return {
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
       { 'ThePrimeagen/git-worktree.nvim' },
+      'benfowler/telescope-luasnip.nvim',
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -71,6 +72,7 @@ return {
       pcall(require('telescope').load_extension, 'ui-select')
 
       require('telescope').load_extension 'git_worktree'
+      require('telescope').load_extension 'luasnip'
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
@@ -85,6 +87,7 @@ return {
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       vim.keymap.set('n', '<leader>sgb', builtin.git_branches, { desc = '[S]earch [G]it branches ("." for repeat)' })
+      vim.keymap.set('n', '<leader>sp', require('telescope').extensions.luasnip.luasnip, { desc = '[S]earch sni[P]pets' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
