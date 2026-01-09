@@ -203,19 +203,19 @@ return {
       --  By default, Neovim doesn't support everything that is in the LSP specification.
       --  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
       --  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-      vim.lsp.enable 'omnisharp'
-      vim.lsp.config('omnisharp', {
-        -- cmd = { 'dotnet', '/home/adrian/.local/share/nvim/mason/packages/omnisharp/OmniSharp', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
-        settings = {
-          FormattingOptions = {
-            OrganizeImports = true,
-          },
-          RoslynExtensionsOptions = {
-            EnableImportCompletion = true,
-          },
-        },
-      })
+      -- local capabilities = require('blink.cmp').get_lsp_capabilities()
+      -- vim.lsp.enable 'omnisharp'
+      -- vim.lsp.config('omnisharp', {
+      --   -- cmd = { 'dotnet', '/home/adrian/.local/share/nvim/mason/packages/omnisharp/OmniSharp', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
+      --   settings = {
+      --     FormattingOptions = {
+      --       OrganizeImports = true,
+      --     },
+      --     RoslynExtensionsOptions = {
+      --       EnableImportCompletion = true,
+      --     },
+      --   },
+      -- })
 
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -264,7 +264,6 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'omnisharp',
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
