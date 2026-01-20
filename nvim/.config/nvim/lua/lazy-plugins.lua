@@ -31,7 +31,6 @@ require('lazy').setup({
   --            })
   --        end,
   --    }
-  'ThePrimeagen/git-worktree.nvim',
   {
     'esmuellert/nvim-eslint',
     config = function()
