@@ -1,3 +1,4 @@
+**/*/.*env
 .idea
 eww/eww/*
 !eww/eww/examples
