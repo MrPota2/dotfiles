@@ -39,7 +39,15 @@ require('lazy').setup({
       -- your configuration comes here; leave empty for default settings
     },
   },
-
+  {
+    'zongben/dbout.nvim',
+    build = 'npm install',
+    lazy = 'VeryLazy',
+    cmd = { 'Dbout' },
+    config = function()
+      require('dbout').setup {}
+    end,
+  },
   {
     'esmuellert/nvim-eslint',
     config = function()

@@ -14,7 +14,7 @@ return {
         styles = {
           comments = { italic = false }, -- Disable italics in comments
           sidebars = 'transparent',
-          floats = 'transparent',
+          floats = 'dark',
         },
         transparent = false,
       }

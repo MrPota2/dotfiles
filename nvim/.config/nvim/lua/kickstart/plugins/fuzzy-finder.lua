@@ -71,6 +71,7 @@ return {
       pcall(require('telescope').load_extension, 'ui-select')
 
       require('telescope').load_extension 'luasnip'
+      require('telescope').load_extension 'dbout'
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
