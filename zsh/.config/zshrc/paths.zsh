@@ -1,0 +1,19 @@
+export PATH="$PATH:/home/adrian/bin"
+
+if [[ -f /opt/mssql-tools18/bin ]]; then
+	export PATH="$PATH:/opt/mssql-tools18/bin"
+else
+	echo "Missing mssql-tools18"
+fi
+
+
+# Created by `pipx` on 2025-05-30 20:31:22
+export PATH="$PATH:/home/adrian/.local/bin"
+if [[ -d $HOME/.cargo/env ]]; then
+	. "$HOME/.cargo/env"
+fi
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
