@@ -112,7 +112,7 @@ CDPATH=~/git
 alias gclean="git fetch --prune && git branch -vv | grep 'gone]' | awk '{print $1}' | xargs git branch -D"
 alias lsgr="eza --git-repos -l"
 alias copy="xsel -ib"
-export PATH="$PATH:/home/adrian/bin"
+export PATH="$PATH:/home/adrian/bin:/opt/mssql-tools18/bin"
 
 # Created by `pipx` on 2025-05-30 20:31:22
 export PATH="$PATH:/home/adrian/.local/bin"
