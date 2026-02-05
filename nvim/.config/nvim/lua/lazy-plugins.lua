@@ -37,6 +37,8 @@ require('lazy').setup({
     ---@type RoslynNvimConfig
     opts = {
       -- your configuration comes here; leave empty for default settings
+      filewatching = 'roslyn',
+      broad_search = true,
     },
   },
   {
