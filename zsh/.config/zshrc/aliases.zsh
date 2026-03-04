@@ -17,3 +17,5 @@ alias lsgr="eza --git-repos -l"
 
 
 alias copy="xsel -ib"
+
+alias i="sudo pacman -S"
