@@ -21,8 +21,8 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Windows_HDR]
 MaxFrameAverage=0
-MaxLuminance=260
-Reference=110
+MaxLuminance=390
+Reference=330
 
 [Xwayland]
 Scale=1

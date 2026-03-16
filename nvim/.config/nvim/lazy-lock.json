@@ -10,6 +10,8 @@
   "indent-blankline.nvim": { "branch": "master", "commit": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "lazydev.nvim": { "branch": "main", "commit": "5231c62aa83c2f8dc8e7ba957aa77098cda1257d" },
+  "live-server.nvim": { "branch": "main", "commit": "6897c94950e05d5b22440c6db8fa24c5c51d8d12" },
+  "markdown-preview.nvim": { "branch": "main", "commit": "858391a1d01dc0daa5233184b4600e1cc0d8d9fc" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "a324581a3c83fdacdb9804b79de1cbe00ce18550" },
   "mason-null-ls.nvim": { "branch": "main", "commit": "8e7806acaa87fae64f0bfde25bb4b87c18bd19b4" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc" },
