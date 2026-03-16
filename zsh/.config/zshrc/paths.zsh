@@ -7,6 +7,11 @@ else
 fi
 
 
+if [[ -f /$HOME/.dotnet/tools ]]; then
+	export PATH="$PATH:/$HOME/tools"
+else
+
+
 # Created by `pipx` on 2025-05-30 20:31:22
 export PATH="$PATH:/home/adrian/.local/bin"
 if [[ -d $HOME/.cargo/env ]]; then
