@@ -7,9 +7,9 @@ else
 fi
 
 
-if [[ -f /$HOME/.dotnet/tools ]]; then
-	export PATH="$PATH:/$HOME/tools"
-else
+if [[ -d /$HOME/.dotnet/tools ]]; then
+	export PATH="$PATH:$HOME/.dotnet/tools"
+fi
 
 
 # Created by `pipx` on 2025-05-30 20:31:22
