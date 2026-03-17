@@ -1,3 +1,8 @@
+[ExtractDialog]
+3 screens: Height=480
+3 screens: Width=962
+DirHistory[$e]=/
+
 [General]
 Version=202
 ViewPropsTimestamp=2026,3,3,18,46,34.166

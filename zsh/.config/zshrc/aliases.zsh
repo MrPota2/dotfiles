@@ -12,7 +12,11 @@
 #
 alias gclean="git fetch --prune && git branch -vv | grep 'gone]' | awk '{print $1}' | xargs git branch -D"
 
-alias ghrp="gh pr create --fill"
+alias ghpr="gh pr create --fill"
+
+alias ghskip="gh pr create --fill && gh pr merge --squash --delete-branch"
+
+alias ghsquash="gh pr merge --squash --delete-branch"
 
 alias lsgr="eza --git-repos -l"
 
