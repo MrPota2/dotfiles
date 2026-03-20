@@ -560,4 +560,4 @@ AppletOrder=123;99;122;102
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Garry's Mod.desktop,0,175c09c6-b31e-4d44-93f3-c81b64040dc4
+screenMapping=desktop:/Garry's Mod.desktop,0,175c09c6-b31e-4d44-93f3-c81b64040dc4,desktop:/Overwatch.desktop,0,175c09c6-b31e-4d44-93f3-c81b64040dc4
