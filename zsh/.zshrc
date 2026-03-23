@@ -26,6 +26,7 @@ plugins=(git pj dotnet)
 source $ZSH/oh-my-zsh.sh
 
 
+
 if [[ -f ~/.config/zshrc/aliases.zsh ]]; then
 	source ~/.config/zshrc/aliases.zsh
 else
@@ -43,6 +44,9 @@ if [[ -f ~/.config/zshrc/completions.zsh ]]; then
 else
 	echo "completions.zsh not found, skipping"
 fi
+
+eval "$(ssh-agent -s -t 86400)" > /dev/null
+ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
 
 eval "$(zoxide init zsh)" # Must be ran after compinit so is added here
 
