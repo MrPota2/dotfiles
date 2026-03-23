@@ -9,7 +9,12 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+if ! fd > /dev/null ; then
+	alias fd="fdfind"
+fi
+
+
 alias gclean="git fetch --prune && git branch -vv | grep 'gone]' | awk '{print $1}' | xargs git branch -D"
 
 alias ghpr="gh pr create --fill"
