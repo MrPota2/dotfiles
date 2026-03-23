@@ -23,9 +23,17 @@ alias ghskip="gh pr create --fill && gh pr merge --squash --delete-branch"
 
 alias ghsquash="gh pr merge --squash --delete-branch"
 
-alias lsgr="eza --git-repos -l"
 
 
 alias copy="xsel -ib"
 
 alias i="sudo pacman -S"
+
+
+# Replace ls with eza
+alias ls='eza -al --color=always --group-directories-first --icons=always' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons=always'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
+alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+alias lsgr="eza --git-repos -l"						   # Show git repo statuses
