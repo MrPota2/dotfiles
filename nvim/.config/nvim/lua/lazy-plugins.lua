@@ -130,6 +130,7 @@ require('lazy').setup({
             code_lens = 'all',
             includeInlayParameterNameHints = 'all',
             includeCompletionsForModuleExports = true,
+            importModuleSpecifierPreference = 'non-relative',
           },
         },
       }
