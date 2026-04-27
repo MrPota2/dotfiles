@@ -53,6 +53,9 @@ vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format { async = true }
 end, { desc = 'Format buffer' })
 
+-- Aerial
+vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
