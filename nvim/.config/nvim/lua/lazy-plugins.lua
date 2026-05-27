@@ -14,6 +14,7 @@ require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   'nvimtools/none-ls.nvim', -- null-ls fork
   'jay-babu/mason-null-ls.nvim', -- bridges mason <-> null-ls
+  'b0o/schemastore.nvim', -- json schemastore for use with jsonls
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -195,8 +196,6 @@ require('lazy').setup({
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   require 'kickstart/plugins/mini',
-
-  require 'kickstart/plugins/treesitter',
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and

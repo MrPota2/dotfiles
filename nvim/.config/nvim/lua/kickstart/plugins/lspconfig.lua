@@ -90,6 +90,7 @@ return {
 
           -- Find references for the word under your cursor.
           map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+          map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
@@ -247,6 +248,18 @@ return {
           },
         },
 
+        yamlls = {
+          settings = {
+            yaml = {
+              validate = true,
+              -- disable the schema store
+              schemaStore = {
+                enable = true,
+              },
+            },
+          },
+        },
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -292,7 +305,7 @@ return {
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
+            vim.lsp.config[server_name] = server
           end,
         },
       }
