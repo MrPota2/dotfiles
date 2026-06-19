@@ -108,11 +108,38 @@ require('lazy').setup({
       { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>" },
     },
   },
+  {
+    'romus204/tree-sitter-manager.nvim',
+    config = function()
+      require('tree-sitter-manager').setup {
+        ensure_installed = {
+          'html',
+          'javascript',
+          'typescript',
+          'tsx',
+          'css',
+          'json',
+        },
+        highlight = true,
+      }
+    end,
+  },
+  {
+    'olrtg/nvim-emmet',
+    ft = { 'html', 'css', 'javascriptreact', 'typescriptreact' },
+    config = function()
+      vim.keymap.set({ 'n', 'v' }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
+    end,
+  },
 
   {
     'windwp/nvim-ts-autotag',
     config = function()
       require('nvim-ts-autotag').setup {
+        event = {
+          'bufReadPre',
+          'BufNewFile',
+        },
 
         opts = {
           -- Defaults
@@ -125,7 +152,7 @@ require('lazy').setup({
         -- doesn't work well in a specific filetype
         per_filetype = {
           ['html'] = {
-            enable_close = false,
+            enable_close = true,
           },
         },
       }
@@ -140,7 +167,7 @@ require('lazy').setup({
       require('typescript-tools').setup {
         -- optional settings
         tsserver_plugins = {
-          '@styled/typescript-styled-plugins',
+          '@styled/typescript-styled-plugin',
         },
         on_attach = function(client, bufnr)
           -- your LSP on_attach stuff (keymaps, etc.)
@@ -148,6 +175,9 @@ require('lazy').setup({
           client.server_capabilities.documentRangeFormattingProvider = false
         end,
         settings = {
+          tsserver_plugins = {
+            '@styled/typescript-styled-plugin',
+          },
           expose_as_code_action = 'all',
           tsserver_file_preferences = {
             code_lens = 'all',
