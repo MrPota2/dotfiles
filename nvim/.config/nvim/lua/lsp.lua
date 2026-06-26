@@ -22,7 +22,6 @@ vim.diagnostic.config {
   float = { border = 'rounded', source = true },
   underline = { severity = vim.diagnostic.severity.ERROR },
   update_in_insert = true,
-  virtual_lines = { current_line = false },
   signs = vim.g.have_nerd_font and {
     text = {
       [vim.diagnostic.severity.ERROR] = '󰅚 ',

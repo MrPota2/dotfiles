@@ -11,7 +11,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove highlights'
 vim.keymap.set('v', '<', '<gv', { desc = 'Unindent and keep selection' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent and keep selection' })
 
-vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Write buffer', nowait = true })
+vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = '[w]rite buffer', nowait = true })
+vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = '[q]uit window', nowait = true })
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })

@@ -77,6 +77,12 @@ return {
           end,
         },
       }
+      vim.keymap.set('i', '<Tab>', function()
+        if vim.fn.pumvisible() == 1 then
+          return '<C-y>'
+        end
+        return '<Tab>'
+      end, { expr = true, desc = 'Accept completion' })
     end,
   },
   {
@@ -92,6 +98,7 @@ return {
   {
     'nvim-mini/mini.snippets',
     version = '*',
+    enabled = false,
     config = function()
       local mini_snippets = require 'mini.snippets'
       local gen_loader = mini_snippets.gen_loader
@@ -106,12 +113,6 @@ return {
           end,
         },
       }
-      vim.keymap.set('i', '<Tab>', function()
-        if vim.fn.pumvisible() == 1 then
-          return '<C-y>'
-        end
-        return '<Tab>'
-      end, { expr = true, desc = 'Accept completion' })
     end,
   },
   {
