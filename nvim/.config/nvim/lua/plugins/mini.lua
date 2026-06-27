@@ -67,6 +67,7 @@ return {
 
   {
     'nvim-mini/mini.completion',
+    enabled = false,
     config = function()
       local mini_completion = require 'mini.completion'
       mini_completion.setup {
@@ -98,7 +99,7 @@ return {
   {
     'nvim-mini/mini.snippets',
     version = '*',
-    enabled = false,
+    enabled = true,
     config = function()
       local mini_snippets = require 'mini.snippets'
       local gen_loader = mini_snippets.gen_loader
@@ -154,7 +155,6 @@ return {
           map.gen_integration.gitsigns(),
         },
       }
-
       map.open()
     end,
   },

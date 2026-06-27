@@ -4,6 +4,10 @@ return {
   opts = {},
   config = function()
     require('typescript-tools').setup {
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_format = 'never',
+      },
       -- optional settings
       tsserver_plugins = {
         '@styled/typescript-styled-plugin',
