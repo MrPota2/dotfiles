@@ -7,9 +7,16 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     'benfowler/telescope-luasnip.nvim',
+    'nvim-telescope/telescope-ui-select.nvim',
+  },
+  opts = {
+    extensions = {
+      ['ui-select'] = require('telescope.themes').get_dropdown {},
+    },
   },
   config = function()
     local builtin = require 'telescope.builtin'
+    require('telescope').load_extension 'ui-select'
 
     vim.keymap.set('n', '<leader>sf', function()
       local ok = pcall(builtin.git_files, { show_untracked = true })

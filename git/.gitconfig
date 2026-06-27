@@ -29,3 +29,6 @@
 	allowedSignersFile = ~/.config/git/allowed_signers
 [pager]
 	log = false
+[diff]
+	tool = vimdiff
+	algorithm = minimal
