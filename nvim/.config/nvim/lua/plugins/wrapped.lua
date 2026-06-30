@@ -1,6 +1,7 @@
 -- Very silly
 return {
-  dir = '~/git/wrapped.nvim',
+  'aikhe/wrapped.nvim',
+  enabled = 'false',
   dependencies = { 'nvzone/volt' },
   cmd = { 'WrappedNvim' },
   opts = {

@@ -14,6 +14,8 @@ for name, config in pairs(servers) do
 end
 vim.lsp.enable(vim.tbl_keys(servers))
 vim.lsp.enable 'oxfmt'
+vim.lsp.enable 'eslint'
+vim.lsp.enable 'ts_ls'
 
 -- Diagnostic Config
 -- See :help vim.diagnostic.Opts

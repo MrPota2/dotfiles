@@ -36,6 +36,6 @@ vim.opt.completeopt = 'menuone,noinsert,fuzzy,nosort'
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text',
   callback = function()
-    vim.hl.hl_op()
+    vim.hl.on_yank()
   end,
 })

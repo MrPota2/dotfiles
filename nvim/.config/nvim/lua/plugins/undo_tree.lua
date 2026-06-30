@@ -3,7 +3,7 @@ return {
   opts = {
     -- your options
   },
-  config = {
+  opt = {
     function()
       local undotree = require 'undotree'
       vim.keymap('n', '<leader>u', undotree.toggle(), { desc = '[U]ndo tree' })
