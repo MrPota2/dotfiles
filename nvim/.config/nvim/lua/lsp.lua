@@ -5,6 +5,7 @@ vim.lsp.config('*', { capabilities = capabilities })
 -- remember to import the servers here
 local servers = {
   lua_ls = require 'lsp.lua_ls',
+  ts_ls = require 'lsp.ts_ls',
 }
 
 for name, config in pairs(servers) do
@@ -15,6 +16,8 @@ end
 vim.lsp.enable(vim.tbl_keys(servers))
 vim.lsp.enable 'oxfmt'
 vim.lsp.enable 'eslint'
+
+vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'ts_ls'
 
 -- Diagnostic Config
