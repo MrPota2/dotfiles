@@ -6,6 +6,7 @@ return {
     'rafamadriz/friendly-snippets',
     'nvim-mini/mini.snippets',
   },
+  version = '1.*',
   build = function()
     -- build the fuzzy matcher, optionally add a timeout to `pwait(timeout_ms)`
     -- you can use `gb` in `:Lazy` to rebuild the plugin as needed
