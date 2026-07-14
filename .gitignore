@@ -2,3 +2,5 @@
 .idea
 eww/eww/*
 !eww/eww/examples
+
+fish/.config/fish/fish_variables
