@@ -1,0 +1,10 @@
+{
+  "Function component": {
+    "prefix": "function",
+    "body": [
+    "import React from 'react'",
+    "interface Props {}",
+      "export default function $TM_FILENAME_BASE({}:Props) {return <div></div>}"
+    ]
+  }
+}
