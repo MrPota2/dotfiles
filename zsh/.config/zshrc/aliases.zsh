@@ -16,11 +16,8 @@ fi
 
 
 alias gclean="git fetch --prune && git branch -vv | grep 'gone]' | awk '{print $1}' | xargs git branch -D"
-
 alias ghpr="gh pr create --fill"
-
 alias ghskip="gh pr create --fill && gh pr merge --squash --delete-branch"
-
 alias ghsquash="gh pr merge --squash --delete-branch"
 
 

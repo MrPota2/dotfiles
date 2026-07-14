@@ -320,6 +320,7 @@ PreviewImage=/usr/share/wallpapers/cachyos-wallpapers/north.png
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][43]
+ItemGeometries-2226x1252=
 ItemGeometries-2560x1440=
 ItemGeometriesHorizontal=
 activityId=175c09c6-b31e-4d44-93f3-c81b64040dc4

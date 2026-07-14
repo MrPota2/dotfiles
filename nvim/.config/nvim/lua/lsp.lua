@@ -2,18 +2,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 vim.lsp.config('*', { capabilities = capabilities })
 
--- remember to import the servers here
-local servers = {
-  lua_ls = require 'lsp.lua_ls',
-  ts_ls = require 'lsp.ts_ls',
-}
-
-for name, config in pairs(servers) do
-  config.capabilities = vim.tbl_deep_extend('force', {}, capabilities, config.capabilities or {})
-
-  vim.lsp.config(name, config)
-end
-vim.lsp.enable(vim.tbl_keys(servers))
 vim.lsp.enable 'oxfmt'
 vim.lsp.enable 'oxlint'
 
