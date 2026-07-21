@@ -48,6 +48,7 @@ map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
 
 vim.keymap.set('n', 'gd', function()
   vim.diagnostic.config { virtual_lines = { current_line = true }, virtual_text = false }
+  vim.diagnostic.open_float()
 
   vim.api.nvim_create_autocmd('CursorMoved', {
     group = vim.api.nvim_create_augroup('line-diagnostics', { clear = true }),
