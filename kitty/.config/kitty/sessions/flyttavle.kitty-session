@@ -1,0 +1,82 @@
+
+new_tab micro
+layout fat:bias=70
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"main_bias": [0.7, 0.30000000000000004], "biased_map": {}, "opts": {"full_size": 1, "bias": 70, "mirrored": "n"}, "class": "Fat", "all_windows": {"active_group_idx": 0, "active_group_history": [1], "window_groups": [{"id": 1, "window_ids": [1]}]}}
+cd /home/adrian/sh-vest/FlyttavleBE/src/CypressCommunicator
+
+launch 'kitty-unserialize-data={"id": 1}'
+focus
+
+new_tab BE
+layout stack
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"opts": {}, "class": "Stack", "all_windows": {"active_group_idx": 0, "active_group_history": [3, 5], "window_groups": [{"id": 3, "window_ids": [6]}, {"id": 5, "window_ids": [11]}]}}
+cd /home/adrian/sh-vest/FlyttavleBE
+
+launch 'kitty-unserialize-data={"id": 6}'
+focus
+launch 'kitty-unserialize-data={"id": 11}'
+
+new_tab FE
+layout stack
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"opts": {}, "class": "Stack", "all_windows": {"active_group_idx": 0, "active_group_history": [10, 14, 8, 9], "window_groups": [{"id": 8, "window_ids": [18]}, {"id": 9, "window_ids": [21]}, {"id": 14, "window_ids": [28]}]}}
+cd /home/adrian/sh-vest/FlyttavleFE
+
+launch 'kitty-unserialize-data={"id": 18}'
+focus
+launch 'kitty-unserialize-data={"id": 21}'
+launch 'kitty-unserialize-data={"id": 28}'
+
+new_tab nvim
+layout fat:bias=70
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"main_bias": [0.7, 0.30000000000000004], "biased_map": {}, "opts": {"full_size": 1, "bias": 70, "mirrored": "n"}, "class": "Fat", "all_windows": {"active_group_idx": 0, "active_group_history": [4, 28], "window_groups": [{"id": 28, "window_ids": [53]}]}}
+cd /home/adrian/sh-vest/siv-documentation
+
+launch 'kitty-unserialize-data={"id": 53}'
+focus
+
+new_tab E2E
+layout stack
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"opts": {}, "class": "Stack", "all_windows": {"active_group_idx": 0, "active_group_history": [16, 7, 6], "window_groups": [{"id": 7, "window_ids": [16]}, {"id": 6, "window_ids": [12]}, {"id": 16, "window_ids": [33]}]}}
+cd /home/adrian/sh-vest/E2ETests
+
+launch 'kitty-unserialize-data={"id": 16}'
+focus
+launch 'kitty-unserialize-data={"id": 12}'
+launch 'kitty-unserialize-data={"id": 33}'
+
+new_tab DFE
+layout stack
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"opts": {}, "class": "Stack", "all_windows": {"active_group_idx": 1, "active_group_history": [11, 19, 12], "window_groups": [{"id": 12, "window_ids": [25]}, {"id": 19, "window_ids": [38]}]}}
+cd /home/adrian/sh-vest/DipsFallbackFE
+
+launch 'kitty-unserialize-data={"id": 25}'
+launch 'kitty-unserialize-data={"id": 38}'
+focus
+
+new_tab DBE
+layout stack
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"opts": {}, "class": "Stack", "all_windows": {"active_group_idx": 1, "active_group_history": [27, 18], "window_groups": [{"id": 18, "window_ids": [37]}, {"id": 27, "window_ids": [52]}]}}
+cd /home/adrian/sh-vest/DipsFallbackBE
+
+launch 'kitty-unserialize-data={"id": 37}'
+launch 'kitty-unserialize-data={"id": 52}'
+focus
+
+new_tab
+layout stack
+enabled_layouts fat:bias=70,splits,stack
+set_layout_state {"opts": {}, "class": "Stack", "all_windows": {"active_group_idx": 1, "active_group_history": [21, 20], "window_groups": [{"id": 20, "window_ids": [41]}, {"id": 21, "window_ids": [42]}]}}
+cd /home/adrian/sh-vest/siv-common
+
+launch 'kitty-unserialize-data={"id": 41}'
+launch 'kitty-unserialize-data={"id": 42}' --cwd=/home/adrian/sh-vest/porter-flow-dev
+focus
+
+focus_tab 7
