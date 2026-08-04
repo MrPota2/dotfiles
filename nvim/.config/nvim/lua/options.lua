@@ -39,3 +39,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+local kitty_window_id = vim.env.KITTY_WINDOW_ID or vim.fn.getpid()
+
+vim.opt.shadafile =
+    vim.fn.stdpath('state') .. '/shada/kitty-' .. kitty_window_id .. '.shada'
