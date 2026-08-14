@@ -25,7 +25,7 @@ return {
           tsserver_file_preferences = {
             code_lens = 'none',
             includeInlayParameterNameHints = 'none',
-            includeCompletionsForModuleExports = fale,
+            includeCompletionsForModuleExports = false,
             importModuleSpecifierPreference = 'non-relative',
           },
         },

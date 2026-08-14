@@ -1,11 +1,11 @@
+---@type vim.lsp.Config
 return {
-  enabled = false,
   ---@type lspconfig.settings.ts_ls
   settings = {
-    typescript = {
-      autoClosingTags = true,
+    ['js/ts'] = {
+      autoClosingTags = { enabled = true },
       preferences = {
-        importModuleSpecifierPreference = 'non-relative',
+        importModuleSpecifier = 'non-relative',
         renameMatchingJsxTags = true
       }
     }

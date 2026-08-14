@@ -17,7 +17,7 @@ function fish_user_key_bindings
 end
 
 # Append common directories for executable files to $PATH
-fish_add_path ~/.local/bin ~/.cargo/bin ~/Applications/depot_tools
+fish_add_path ~/.local/bin ~/.cargo/bin ~/Applications/depot_tools ~/.dotnet/tools
 
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang

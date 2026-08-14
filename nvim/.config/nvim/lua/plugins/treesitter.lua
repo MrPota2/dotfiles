@@ -1,13 +1,13 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   enable = "true",
-  opts = {
-    ensure_installed = { 'typescript', 'javascript', 'tsx' },
-    highlight = {
-      enable = true,
-    },
-  },
   config = function()
-    vim.treesitter.language.register('tsx', 'typescriptreact')
+    require('nvim-treesitter').setup()
+
+    require('nvim-treesitter').install({
+      'tsx',
+      'typescript',
+      'javascript',
+    })
   end,
 }

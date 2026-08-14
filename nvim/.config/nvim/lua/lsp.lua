@@ -6,8 +6,7 @@ vim.lsp.enable 'oxfmt'
 vim.lsp.enable 'oxlint'
 
 vim.lsp.enable 'lua_ls'
-vim.lsp.enable 'ts_ls'
-vim.lsp.enable 'tsgo'
+vim.lsp.enable 'tsc'
 
 -- Diagnostic Config
 -- See :help vim.diagnostic.Opts
