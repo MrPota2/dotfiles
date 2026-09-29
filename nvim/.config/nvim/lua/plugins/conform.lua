@@ -8,6 +8,7 @@ return {
         javascriptreact = { 'prettier', 'eslint_d' },
         typescript = { 'prettier', 'eslint_d' },
         typescriptreact = { 'prettier', 'eslint_d' },
+        css = { "prettier" }
       },
       format_on_save = {
         -- These options will be passed to conform.format()

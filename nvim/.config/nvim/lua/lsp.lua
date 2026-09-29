@@ -7,6 +7,8 @@ vim.lsp.enable 'oxlint'
 
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'tsc'
+vim.lsp.enable 'cssls'
+vim.lsp.enable 'cssmodules_ls'
 
 -- Diagnostic Config
 -- See :help vim.diagnostic.Opts
